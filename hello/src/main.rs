@@ -28,4 +28,8 @@ fn main() {
         numbers.push(u64::from_str(&arg)
                     .expect("error parsing argument"));
     }
+
+    if numbers.len() == 0 {
+    }
+
 }
