@@ -24,4 +24,6 @@ fn test_gcd() {
 fn main() {
     let mut numbers = Vec::new();
 
+    for arg in std::env::args() {
+    }
 }
