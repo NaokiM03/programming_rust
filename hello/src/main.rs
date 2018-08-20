@@ -25,5 +25,7 @@ fn main() {
     let mut numbers = Vec::new();
 
     for arg in std::env::args() {
+        numbers.push(u64::from_str(&arg)
+                    .expect("error parsing argument"));
     }
 }
