@@ -22,4 +22,6 @@ fn test_gcd() {
 }
 
 fn main() {
+    let mut numbers = Vec::new();
+
 }
