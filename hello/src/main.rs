@@ -39,4 +39,6 @@ fn main() {
         d = gcd(d, *m);
     }
 
+    println!("The greatest common divisor of {:?} is {}",
+            numbers, d);
 }
