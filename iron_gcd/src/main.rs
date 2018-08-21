@@ -18,6 +18,7 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
         </form>
     "#);
 
+    Ok(response)
 }
 
 fn main() {
