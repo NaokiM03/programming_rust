@@ -22,4 +22,5 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
 }
 
 fn main() {
+    Iron::new(get_form).http("localhost:3000").unwrap();
 }
