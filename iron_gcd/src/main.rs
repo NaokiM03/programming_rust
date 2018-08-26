@@ -27,6 +27,9 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
     Ok(response)
 }
 
+fn post_gcd(request: &mut Request) -> IronResult<Response> {
+}
+
 fn main() {
     let mut router = Router::new();
 
