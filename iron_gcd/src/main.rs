@@ -9,6 +9,7 @@ use router::Router;
 
 extern crate urlencoded;
 
+use std::str::FromStr;
 use urlencoded::UrlEncodedBody;
 
 fn get_form(_request: &mut Request) -> IronResult<Response> {
@@ -51,6 +52,18 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
         }
         Some(nums) => nums
     };
+
+    let mut numbers = Vec::new();
+    for unparsed in unparsed_numbers {
+        match u64::from_str(&unparsed) {
+            Err(_) => {
+                response.set_mut(status::BadRequest);
+                response.set_mut(format!("Value for 'n' parameter not a numbers: {:?}\n", unparsed));
+                return Ok(response);
+            }
+            Ok(n) => { numbers.push(n); }
+        }
+    }
 
 }
 
