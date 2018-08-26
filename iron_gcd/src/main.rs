@@ -7,6 +7,10 @@ use iron::status;
 extern crate router;
 use router::Router;
 
+extern crate urlencoded;
+
+use urlencoded::UrlEncodedBody;
+
 fn get_form(_request: &mut Request) -> IronResult<Response> {
     let mut response = Response::new();
 
@@ -29,6 +33,15 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
 
 fn post_gcd(request: &mut Request) -> IronResult<Response> {
     let mut response = Response::new();
+
+    let form_data = match request.get_ref::<UrlEncodedBody>() {
+        Err(e) => {
+            response.set_mut(status::BadRequest);
+            response.set_mut(format!("Error parsing form data: {:?}\n", e));
+            return Ok(response);
+        }
+        Ok(map) => map
+    };
 
 }
 
