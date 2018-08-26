@@ -28,6 +28,8 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
 }
 
 fn post_gcd(request: &mut Request) -> IronResult<Response> {
+    let mut response = Response::new();
+
 }
 
 fn main() {
