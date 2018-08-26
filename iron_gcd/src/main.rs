@@ -32,6 +32,19 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
     Ok(response)
 }
 
+fn gcd(mut n: u64, mut m: u64) -> u64 {
+    assert!(n != 0 && m != 0);
+    while m != 0 {
+        if m < n {
+            let t: u64 = m;
+            m = n;
+            n = t;
+        }
+        m = m % n;
+    }
+    n
+}
+
 fn post_gcd(request: &mut Request) -> IronResult<Response> {
     let mut response = Response::new();
 
@@ -63,6 +76,11 @@ fn post_gcd(request: &mut Request) -> IronResult<Response> {
             }
             Ok(n) => { numbers.push(n); }
         }
+    }
+
+    let mut d = numbers[0];
+    for m in &numbers[1..] {
+        d = gcd(d, *m);
     }
 
 }
