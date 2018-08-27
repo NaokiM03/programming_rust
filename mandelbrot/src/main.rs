@@ -96,7 +96,7 @@ use image::ColorType;
 use image::png::PNGEncoder;
 use std::fs::File;
 
-fn write_image(filename: &str, pixels: &[u8], bounds: (usize, usize)) -> Result<(), std::io::Error> {
+fn write_image(filename: &str, pixels: &[u8], bounds: (usize, usize)) -> Result<()> {
     let output = File::create(filename)?;
 
     let encoder = PNGEncoder::new(output);
