@@ -73,8 +73,8 @@ fn test_pixel_to_point() {
 
 fn render(pixels: &mut [u8],
           bounds: (usize, usize),
-          upper_left: <Complex<f64>,
-          lower_right: <Complex<f64>) {
+          upper_left: Complex<f64>,
+          lower_right: Complex<f64>) {
     assert!(pixels.len() == bounds.0 * bounds.1);
 
     for row in 0 .. bounds.1 {
