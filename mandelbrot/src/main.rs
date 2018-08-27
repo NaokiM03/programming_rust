@@ -95,6 +95,7 @@ extern crate image;
 use image::ColorType;
 use image::png::PNGEncoder;
 use std::fs::File;
+use std::io::Result;
 
 fn write_image(filename: &str, pixels: &[u8], bounds: (usize, usize)) -> Result<()> {
     let output = File::create(filename)?;
