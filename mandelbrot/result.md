@@ -76,3 +76,71 @@ TotalMinutes      : 0.0597007166666667
 TotalSeconds      : 3.582043
 TotalMilliseconds : 3582.043
 ```
+
+---
+
+## P.S.
+
+## 24thread
+
+```
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 521
+Ticks             : 5212927
+TotalDays         : 6.03348032407407E-06
+TotalHours        : 0.000144803527777778
+TotalMinutes      : 0.00868821166666667
+TotalSeconds      : 0.5212927
+TotalMilliseconds : 521.2927
+```
+
+## 36thread
+
+```
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 447
+Ticks             : 4473707
+TotalDays         : 5.17790162037037E-06
+TotalHours        : 0.000124269638888889
+TotalMinutes      : 0.00745617833333333
+TotalSeconds      : 0.4473707
+TotalMilliseconds : 447.3707
+```
+
+## 48thread
+
+```
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 431
+Ticks             : 4312565
+TotalDays         : 4.99139467592593E-06
+TotalHours        : 0.000119793472222222
+TotalMinutes      : 0.00718760833333333
+TotalSeconds      : 0.4312565
+TotalMilliseconds : 431.2565
+```
+
+## 96thread
+
+```
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 404
+Ticks             : 4040574
+TotalDays         : 4.67659027777778E-06
+TotalHours        : 0.000112238166666667
+TotalMinutes      : 0.00673429
+TotalSeconds      : 0.4040574
+TotalMilliseconds : 404.0574
+```
