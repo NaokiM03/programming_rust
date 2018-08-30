@@ -135,6 +135,7 @@ fn main() {
     let mut pixels = vec![0; bounds.0 * bounds.1];
 
     render(&mut pixels, bounds, upper_left, lower_right);
+    let threads = 8;
 
     write_image(&args[1], &pixels, bounds)
         .expect("error writing PNG file");
