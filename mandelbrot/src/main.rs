@@ -136,6 +136,8 @@ fn main() {
 
     render(&mut pixels, bounds, upper_left, lower_right);
     let threads = 8;
+    let rows_per_band = bounds.1 / threads + 1;
+
 
     write_image(&args[1], &pixels, bounds)
         .expect("error writing PNG file");
