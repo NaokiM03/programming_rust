@@ -139,6 +139,8 @@ fn main() {
     let rows_per_band = bounds.1 / threads + 1;
 
     {
+        let bands: Vec<&mut [u8]> =
+            pixels.chunks_mut(rows_per_band * bounds.0).collect();
     }
 
     write_image(&args[1], &pixels, bounds)
